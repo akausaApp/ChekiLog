@@ -1,36 +1,280 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>ChekiLog Support</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChekiLog サポートページ</title>
+  <meta name="description" content="チェキ集計アプリ ChekiLog のサポートページ。不具合報告・ご要望・使い方の質問はこちらから。" />
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --card:#12131a;
+      --text:#e9e9ee;
+      --muted:#b6b7c2;
+      --line:#2a2c37;
+      --accent:#7aa7ff;
+      --accent2:#7dffa6;
+      --radius:16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --max: 900px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN",
+                   "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", "Segoe UI", sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(122,167,255,.25), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(125,255,166,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      padding: 48px 20px 24px;
+    }
+    .wrap{
+      width:100%;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+    }
+    .badge{
+      display:inline-flex;
+      gap:.5rem;
+      align-items:center;
+      padding: 6px 10px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(26px, 3vw, 34px);
+      letter-spacing: .2px;
+    }
+    .lead{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    main{ padding: 18px 20px 60px; }
+    section{
+      margin-top: 18px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 22px 22px;
+    }
+    h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing:.2px;
+    }
+    h3{
+      margin: 14px 0 6px;
+      font-size: 15px;
+      color: var(--text);
+    }
+    ul{ margin: 8px 0 0; padding-left: 20px; }
+    li{ margin: 6px 0; color: var(--muted); }
+    p{ margin: 8px 0; color: var(--muted); }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+    .note{
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .kvs{
+      display:grid;
+      grid-template-columns: 140px 1fr;
+      gap: 10px 14px;
+      margin-top: 10px;
+    }
+    .kvs div{
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.18);
+    }
+    .kvs .k{ color: var(--muted); font-size: 13px; }
+    .kvs .v{ color: var(--text); font-size: 14px; }
+    .muted{ color: var(--muted); }
+    footer{
+      padding: 22px 20px 40px;
+      color: var(--muted);
+      text-align:center;
+      font-size: 12px;
+      opacity:.9;
+    }
+    .pill{
+      display:inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .hr{
+      height: 1px;
+      background: rgba(255,255,255,.10);
+      margin: 16px 0;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>ChekiLog サポート</h1>
+  <header>
+    <div class="wrap">
+      <div class="hero">
+        <div class="badge">📷 ChekiLog / Support</div>
+        <h1>ChekiLog サポートページ</h1>
+        <p class="lead">
+          チェキ集計アプリ <strong>ChekiLog</strong> のサポートページです。<br />
+          不具合報告・ご要望・使い方のご質問はこちらからご連絡ください。
+        </p>
+      </div>
+    </div>
+  </header>
 
-  <p>
-    ChekiLog は、アイドルとのチェキを記録・管理するためのアプリです。
-  </p>
+  <main>
+    <div class="wrap">
 
-  <h2>お問い合わせ</h2>
-  <p>
-    ご質問・不具合報告・ご要望は、以下のメールアドレスまでご連絡ください。
-  </p>
+      <section>
+        <h2>できること</h2>
+        <div class="grid">
+          <ul>
+            <li>現場で撮ったチェキ、オンラインで購入したチェキをまとめて記録</li>
+            <li>グループ／メンバーごとに管理</li>
+            <li>カレンダーで日付から振り返り</li>
+            <li>月別集計・トータル集計・メンバーランキング</li>
+          </ul>
+          <ul>
+            <li>写真の添付／拡大表示</li>
+            <li>ログの共有（ポスト）・編集・削除</li>
+            <li>iCloud同期（対応端末で自動同期）</li>
+          </ul>
+        </div>
+      </section>
 
-  <p>
-    <strong>Email:</strong><br>
-    akausaapp@gmail.com
-  </p>
+      <section>
+        <h2>使い方（最初にやること）</h2>
 
-  <h2>対応内容</h2>
-  <ul>
-    <li>アプリの使い方に関する質問</li>
-    <li>不具合・改善要望の受付</li>
-    <li>その他サポート全般</li>
-  </ul>
+        <h3>1. 初期設定</h3>
+        <p>アプリを使う前に、まず「初期設定」で以下を登録します。</p>
+        <ul>
+          <li>グループ</li>
+          <li>メンバー</li>
+        </ul>
 
-  <p>
-    ※返信には数日かかる場合があります。あらかじめご了承ください。
-  </p>
+        <div class="hr"></div>
+
+        <h3>2. ログを追加</h3>
+        <p>「追加」からログを作成します。登録できる項目：</p>
+        <ul>
+          <li>日付</li>
+          <li>グループ</li>
+          <li>メンバー（複数選択可）</li>
+          <li>枚数（1〜10）</li>
+          <li>単価（任意）</li>
+          <li>写真（任意）</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h3>3. 振り返り・分析</h3>
+        <ul>
+          <li>カレンダーで日別に確認</li>
+          <li>分析画面で期間を選んで集計（去年などの過去期間も対応）</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>よくある質問（FAQ）</h2>
+
+        <h3>Q. 写真はアルバム（写真App）と同じ管理ですか？</h3>
+        <p>
+          いいえ。アプリ内では「ログ用の写真」として扱います。<br />
+          アプリ側でログを削除しても、写真Appの写真が消えることはありません。
+        </p>
+
+        <h3>Q. iCloud同期はどんな動きですか？</h3>
+        <p>
+          同じApple IDでiCloudにサインインしている端末間で、対応データが同期されます。<br />
+          <span class="muted">※ ネットワーク状況により反映に時間がかかる場合があります。</span>
+        </p>
+
+        <h3>Q. データを全消去したい</h3>
+        <p>
+          設定内の「全データを消去」から実行できます。<br />
+          誤操作防止のため、確認を複数回行う仕様です。
+        </p>
+      </section>
+
+      <section>
+        <h2>お問い合わせ</h2>
+        <p>不具合報告・ご要望は、以下のいずれかでご連絡ください。</p>
+
+        <div class="kvs">
+          <div class="k">メール</div>
+          <div class="v"><span class="pill">akausaapp@gmail.com</span></div>
+        </div>
+
+        <div class="hr"></div>
+
+        <p class="note">
+          連絡の際は、可能であれば以下を添えてください：<br />
+          ・端末名（例：iPhone 16 Pro Max）<br />
+          ・iOSバージョン<br />
+          ・アプリのバージョン<br />
+          ・発生した状況（いつ／どの画面で）<br />
+          ・スクリーンショット（任意）
+        </p>
+      </section>
+
+      <section>
+        <h2>プライバシーについて</h2>
+        <p>
+          本アプリは、ユーザーが入力したデータ（グループ・メンバー・ログ等）を管理するために利用します。<br />
+          写真へのアクセスは、ユーザーが写真を添付するために必要な場合にのみ使用します。
+        </p>
+      </section>
+
+      <section>
+        <h2>更新情報</h2>
+        <p>アップデート内容や追加機能については、このページで随時ご案内します。</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© ChekiLog 2026</div>
+      <div class="muted">This page is for app support and user inquiries.</div>
+    </div>
+  </footer>
 </body>
 </html>
